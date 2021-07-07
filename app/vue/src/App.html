@@ -1,0 +1,40 @@
+<template>
+  <div class="app">
+    <nav>
+      <router-link :to="{ name: 'Home' }">Home</router-link> |
+      <router-link :to="{ name: 'About' }">About</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
+
+</template>
+
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {};
+    },
+    computed: {},
+    methods: {},
+    mounted() {
+      console.log('mounted app');
+    }
+  };
+</script>
+
+<style>
+  .app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+  }
+
+  nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  nav a.router-link-exact-active {
+    color: #42b983;
+  }
+</style>

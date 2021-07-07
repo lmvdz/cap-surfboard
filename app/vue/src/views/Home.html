@@ -1,0 +1,36 @@
+<template>
+  <div class="home">
+    <h1>{{ message }}</h1>
+    <bar></bar>
+    <pre>{{ $store.state }}</pre>
+    <pre>{{ $store.getters }}</pre>
+    <button type="button" @click="$store.commit('increment')">
+      increment mutation
+    </button>
+    <button type="button" @click="$store.dispatch('increment')">
+      increment action
+    </button>
+  </div>
+</template>
+
+<script>
+  export default {
+  name: 'Home',
+  components: {
+    bar: () => importSFC('./src/components/Bar.vue')
+  },
+  data() {
+    return {
+      message: 'Hello Vue!'
+    };
+  },
+  computed: {},
+  methods: {}
+};
+</script>
+
+<style scoped>
+  .home h1 {
+    margin: 0;
+  }
+</style>
